@@ -1384,19 +1384,63 @@ static void Task_NewGameBirchSpeech_MainSpeech(u8 taskId)
 }
 
 #define tState data[0]
+#define tSpriteId data[0]
+
+static void WalkPokemonCARALHO(u8 taskId)
+{
+    u8 spriteId = gTasks[taskId].tSpriteId;
+    struct Sprite *sprite = &gSprites[spriteId];
+
+    gSprites[spriteId].x += 1;
+    StartSpriteAnim(&gSprites[spriteId], 0);
+
+    struct Task *task = &gTasks[taskId];
+
+    // Incrementa o timer
+    task->tTimer++;
+
+    if (gSprites[spriteId].x == 10 || gSprites[spriteId].x == 30 || gSprites[spriteId].x == 50 || gSprites[spriteId].x == 70 || gSprites[spriteId].x == 90)
+    {
+        gSprites[spriteId].y -= 5;
+    } else if (gSprites[spriteId].x == 20 || gSprites[spriteId].x == 40 || gSprites[spriteId].x == 60 || gSprites[spriteId].x == 80) {
+        gSprites[spriteId].y += 5;
+    }
+    // Chegou no centro?
+    if (gSprites[spriteId].x >= 100)
+    {
+        gSprites[spriteId].x = 100;
+        gSprites[spriteId].y = 75;
+    }
+    if (task->tTimer == 120)
+    {
+        // Código final
+        gSprites[spriteId].oam.affineMode = 1;
+        BattleAnimateFrontSprite(sprite, SPECIES_CLOBBOPUS, FALSE, 0);
+    }
+}
 
 static void Task_NewGameBirchSpeechSub_InitPokeBall(u8 taskId)
 {
     u8 spriteId = gTasks[sBirchSpeechMainTaskId].tLotadSpriteId;
 
-    gSprites[spriteId].x = 100;
+    gSprites[spriteId].x = -10;
     gSprites[spriteId].y = 75;
     gSprites[spriteId].invisible = FALSE;
     gSprites[spriteId].data[0] = 0;
 
-    CreatePokeballSpriteToReleaseMon(spriteId, gSprites[spriteId].oam.paletteNum, 112, 58, 0, 0, 32, PALETTES_BG, SPECIES_LOTAD);
+    // vira para a direita (PROXIMO DO CENTRO)
+    gSprites[spriteId].oam.affineMode = 0;
+    gSprites[spriteId].hFlip = TRUE;
+
+    // animação de andar (geralmente anim 1)
+    StartSpriteAnim(&gSprites[spriteId], 1);
+
+    //CreatePokeballSpriteToReleaseMon(spriteId, gSprites[spriteId].oam.paletteNum, 112, 58, 0, 0, 32, PALETTES_BG, SPECIES_LOTAD);
     gTasks[taskId].func = Task_NewGameBirchSpeechSub_WaitForLotad;
     gTasks[sBirchSpeechMainTaskId].tTimer = 0;
+
+    taskId = CreateTask(WalkPokemonCARALHO, 0);
+    gTasks[taskId].tSpriteId = spriteId;
 }
 
 static void Task_NewGameBirchSpeechSub_WaitForLotad(u8 taskId)
@@ -1896,7 +1940,7 @@ static void SpriteCB_MovePlayerDownWhileShrinking(struct Sprite *sprite)
 
 static u8 NewGameBirchSpeech_CreateLotadSprite(u8 x, u8 y)
 {
-    return CreateMonPicSprite_Affine(SPECIES_LOTAD, FALSE, 0, MON_PIC_AFFINE_FRONT, x, y, 14, TAG_NONE);
+    return CreateMonPicSprite_Affine(SPECIES_CLOBBOPUS, FALSE, 0, MON_PIC_AFFINE_FRONT, x, y, 14, TAG_NONE);
 }
 
 static void AddBirchSpeechObjects(u8 taskId)

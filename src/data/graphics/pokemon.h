@@ -23537,7 +23537,7 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //P_FAMILY_SIZZLIPEDE
 
 #if P_FAMILY_CLOBBOPUS
-    const u32 gMonFrontPic_Clobbopus[] = INCBIN_U32("graphics/pokemon/clobbopus/front.4bpp.smol");
+    const u32 gMonFrontPic_Clobbopus[] = INCBIN_U32("graphics/pokemon/clobbopus/anim_front.4bpp.smol");
     const u16 gMonPalette_Clobbopus[] = INCBIN_U16("graphics/pokemon/clobbopus/normal.gbapal");
     const u32 gMonBackPic_Clobbopus[] = INCBIN_U32("graphics/pokemon/clobbopus/back.4bpp.smol");
     const u16 gMonShinyPalette_Clobbopus[] = INCBIN_U16("graphics/pokemon/clobbopus/shiny.gbapal");
