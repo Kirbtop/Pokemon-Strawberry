@@ -5,6 +5,7 @@
 #include "palette.h"
 #include "event_data.h"
 #include "constants/mugshots.h"
+#include "constants/rgb.h" 
 
 #define MUGSHOT_PALETTE_NUM 13
 
@@ -23,6 +24,8 @@ struct Mugshot{
 void DrawMugshot(void); //VAR_0x8000 = mugshot id
 void DrawMugshotAtPos(void); //VAR_0x8000 = mugshot id, VAR_0x8001 = x, VAR_0x8002 = y
 void ClearMugshot(void);
+void FadeMugshot(void); 
+void FadeMugshotEntrace(void);
 
 
 static const struct Mugshot sMugshots[] = {
@@ -71,4 +74,16 @@ void DrawMugshot(void){
 
 void DrawMugshotAtPos(void){
     DrawMugshotCore(sMugshots + VarGet(VAR_0x8000), VarGet(VAR_0x8001), VarGet(VAR_0x8002));
+}
+
+void FadeMugshot(void){
+    if(sMugshotWindow != 0){
+        BeginNormalPaletteFade(1 << 13, 10, 0, 15, RGB_BLACK);
+    }
+}
+
+void FadeMugshotEntrace(void){
+    if(sMugshotWindow != 0){
+        BeginNormalPaletteFade(1 << 13, 10, 15, 0, RGB_BLACK);
+    }
 }

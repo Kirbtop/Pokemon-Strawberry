@@ -244,8 +244,11 @@ LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeFemale::
 LittlerootTown_EventScript_FatMan::
 	setvar VAR_0x8000, 0
     callnative DrawMugshot
-    msgbox LittlerootTown_Text_CanUsePCToStoreItems, MSGBOX_NPC
-    callnative ClearMugshot
+	callnative FadeMugshotEntrace
+	msgbox LittlerootTown_Text_CanUsePCToStoreItems, MSGBOX_NPC
+	callnative FadeMugshot
+	delay 130
+	callnative ClearMugshot
 	end
 
 LittlerootTown_EventScript_Boy::
