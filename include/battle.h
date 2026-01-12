@@ -781,7 +781,6 @@ struct BattleStruct
     u8 hazardsQueue[NUM_BATTLE_SIDES][HAZARDS_MAX_COUNT];
     u8 numHazards[NUM_BATTLE_SIDES];
     u8 hazardsCounter:4; // Counter for applying hazard on switch in
-    u8 padding2:4;
     bool8 lastMonMusicPlayed; // Evita tocar a musica a musica repetidas vezes
     enum SubmoveState submoveAnnouncement:2;
     u8 tryDestinyBond:1;
