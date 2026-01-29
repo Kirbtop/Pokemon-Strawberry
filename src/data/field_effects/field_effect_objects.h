@@ -1448,3 +1448,38 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_RockClimbDust = {
 };
 
 const struct SpritePalette gSpritePalette_BigDust = {gFieldEffectPal_DustCloud, FLDEFF_PAL_TAG_DUST_CLOUD};
+
+static const struct SpriteFrameImage sPicTable_AutumnGrass[] = {
+    overworld_frame(gFieldEffectObjectPic_AutumnGrass, 2, 2, 0),
+    overworld_frame(gFieldEffectObjectPic_AutumnGrass, 2, 2, 1),
+    overworld_frame(gFieldEffectObjectPic_AutumnGrass, 2, 2, 2),
+    overworld_frame(gFieldEffectObjectPic_AutumnGrass, 2, 2, 3),
+    overworld_frame(gFieldEffectObjectPic_AutumnGrass, 2, 2, 4),
+};
+
+static const union AnimCmd sAnim_AutumnGrass[] =
+{
+    ANIMCMD_FRAME(1, 10),
+    ANIMCMD_FRAME(2, 10),
+    ANIMCMD_FRAME(3, 10),
+    ANIMCMD_FRAME(4, 10),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnimTable_AutumnGrass[] =
+{
+    sAnim_AutumnGrass,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_AutumnGrass = {
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_AUTUMN_GRASS,
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_AutumnGrass,
+    .images = sPicTable_AutumnGrass,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = WaitFieldEffectSpriteAnim,
+};
+
+const struct SpritePalette gSpritePalette_AutumnGrass = {gFieldEffectPal_AutumnGrass, FLDEFF_PAL_TAG_AUTUMN_GRASS};

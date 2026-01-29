@@ -73,6 +73,8 @@ static void QueueAnimTiles_MauvilleGym_ElectricGates(u16);
 static void QueueAnimTiles_SootopolisGym_Waterfalls(u16);
 static void QueueAnimTiles_EliteFour_GroundLights(u16);
 static void QueueAnimTiles_EliteFour_WallLights(u16);
+static void QueueAnimTiles_Dandelion_Flower(u16);
+static void TilesetAnim_Santana(u16);
 
 const u16 gTilesetAnims_General_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/1.4bpp");
 const u16 gTilesetAnims_General_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/0.4bpp");
@@ -544,6 +546,17 @@ static const u16 *const sTilesetAnims_BattleDomeFloorLightPals[] = {
     gTilesetAnims_BattleDomePals0_3,
 };
 
+const u16 gTilesetAnims_dandelion_flower_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/dandelion_flower/0.4bpp");
+const u16 gTilesetAnims_dandelion_flower_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/dandelion_flower/1.4bpp");
+const u16 gTilesetAnims_dandelion_flower_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/dandelion_flower/2.4bpp");
+
+const u16 *const gTilesetAnims_dandelion_flower[] = {
+    gTilesetAnims_dandelion_flower_Frame0,
+    gTilesetAnims_dandelion_flower_Frame1,
+    gTilesetAnims_dandelion_flower_Frame0,
+    gTilesetAnims_dandelion_flower_Frame2
+};
+
 static void ResetTilesetAnimBuffer(void)
 {
     sTilesetDMA3TransferBufferSize = 0;
@@ -677,7 +690,7 @@ void InitTilesetAnim_Petalburg(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
-    sSecondaryTilesetAnimCallback = NULL;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Santana;
 }
 
 void InitTilesetAnim_Rustboro(void)
@@ -832,6 +845,13 @@ void InitTilesetAnim_BattleDome(void)
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
     sSecondaryTilesetAnimCallback = TilesetAnim_BattleDome;
+}
+
+void InitTilesetAnim_Santana(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Santana;
 }
 
 static void TilesetAnim_Rustboro(u16 timer)
@@ -1185,4 +1205,16 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
         if (!--sSecondaryTilesetAnimCounterMax)
             sSecondaryTilesetAnimCallback = NULL;
     }
+}
+
+static void QueueAnimTiles_Dandelion_Flower(u16 timer)
+{
+    u16 i = timer % 4; 
+    AppendTilesetAnimToBuffer(gTilesetAnims_dandelion_flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(592)), 0x080);
+}
+
+static void TilesetAnim_Santana(u16 timer)
+{
+    if (timer % 4 == 0)
+        QueueAnimTiles_Dandelion_Flower(timer >> 6);
 }
