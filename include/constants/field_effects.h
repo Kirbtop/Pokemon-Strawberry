@@ -81,7 +81,6 @@
 #define FLDEFF_ROCK_CLIMB_DUST           76
 #define FLDEFF_ORAS_DOWSE                77
 #define FLDEFF_AUTUMN_GRASS              78
-#define FLDEFF_JUMP_AUTUMN_GRASS         79
 
 #define FLDEFFOBJ_SHADOW_S              0
 #define FLDEFFOBJ_SHADOW_M              1

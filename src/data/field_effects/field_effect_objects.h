@@ -1479,7 +1479,7 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_AutumnGrass = {
     .anims = sAnimTable_AutumnGrass,
     .images = sPicTable_AutumnGrass,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = WaitFieldEffectSpriteAnim,
+    .callback = WaitFieldEffectSpriteAnim //UpdateAutumnGrassFieldEffect,
 };
 
 const struct SpritePalette gSpritePalette_AutumnGrass = {gFieldEffectPal_AutumnGrass, FLDEFF_PAL_TAG_AUTUMN_GRASS};
