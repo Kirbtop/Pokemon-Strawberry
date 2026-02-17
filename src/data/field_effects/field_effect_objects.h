@@ -1459,11 +1459,11 @@ static const struct SpriteFrameImage sPicTable_AutumnGrass[] = {
 
 static const union AnimCmd sAnim_AutumnGrass[] =
 {
-    ANIMCMD_FRAME(1, 10),
-    ANIMCMD_FRAME(2, 10),
-    ANIMCMD_FRAME(3, 10),
-    ANIMCMD_FRAME(4, 10),
-    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(1, 36),
+    ANIMCMD_FRAME(2, 36),
+    ANIMCMD_FRAME(3, 36),
+    ANIMCMD_FRAME(4, 36),
+    ANIMCMD_FRAME(0, 36),
     ANIMCMD_END,
 };
 
@@ -1479,7 +1479,7 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_AutumnGrass = {
     .anims = sAnimTable_AutumnGrass,
     .images = sPicTable_AutumnGrass,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = WaitFieldEffectSpriteAnim //UpdateAutumnGrassFieldEffect,
+    .callback = WaitFieldEffectSpriteAnim,
 };
 
 const struct SpritePalette gSpritePalette_AutumnGrass = {gFieldEffectPal_AutumnGrass, FLDEFF_PAL_TAG_AUTUMN_GRASS};

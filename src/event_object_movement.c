@@ -169,7 +169,6 @@ static void DoRippleFieldEffect(struct ObjectEvent *, struct Sprite *);
 static void DoGroundEffects_OnSpawn(struct ObjectEvent *, struct Sprite *);
 static void DoGroundEffects_OnBeginStep(struct ObjectEvent *, struct Sprite *);
 static void DoGroundEffects_OnFinishStep(struct ObjectEvent *, struct Sprite *);
-static void DoAutumnGrassFieldEffect(struct ObjectEvent *, struct Sprite *);
 static void VirtualObject_UpdateAnim(struct Sprite *);
 static void ApplyLevitateMovement(u8);
 static bool8 MovementType_Disguise_Callback(struct ObjectEvent *, struct Sprite *);
@@ -9945,12 +9944,6 @@ void GroundEffect_SpawnOnAutumnGrass(struct ObjectEvent *objEvent, struct Sprite
 {
     gFieldEffectArguments[0] = objEvent->currentCoords.x;
     gFieldEffectArguments[1] = objEvent->currentCoords.y;
-    gFieldEffectArguments[2] = objEvent->previousElevation;
-    gFieldEffectArguments[3] = 2; // priority
-    gFieldEffectArguments[4] = objEvent->localId << 8 | objEvent->mapNum;
-    gFieldEffectArguments[5] = objEvent->mapGroup;
-    gFieldEffectArguments[6] = (u8)gSaveBlock1Ptr->location.mapNum << 8 | (u8)gSaveBlock1Ptr->location.mapGroup;
-    gFieldEffectArguments[7] = TRUE; // skip to end of anim
     FieldEffectStart(FLDEFF_AUTUMN_GRASS);
 }
 
@@ -9965,6 +9958,19 @@ void GroundEffect_StepOnTallGrass(struct ObjectEvent *objEvent, struct Sprite *s
     gFieldEffectArguments[6] = (u8)gSaveBlock1Ptr->location.mapNum << 8 | (u8)gSaveBlock1Ptr->location.mapGroup;
     gFieldEffectArguments[7] = FALSE; // don't skip to end of anim
     FieldEffectStart(FLDEFF_TALL_GRASS);
+}
+
+void GroundEffect_StepOnAutumnGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
+{
+    gFieldEffectArguments[0] = objEvent->currentCoords.x;
+    gFieldEffectArguments[1] = objEvent->currentCoords.y;
+    gFieldEffectArguments[2] = objEvent->previousElevation;
+    gFieldEffectArguments[3] = 2; // priority
+    gFieldEffectArguments[4] = objEvent->localId << 8 | objEvent->mapNum;
+    gFieldEffectArguments[5] = objEvent->mapGroup;
+    gFieldEffectArguments[6] = (u8)gSaveBlock1Ptr->location.mapNum << 8 | (u8)gSaveBlock1Ptr->location.mapGroup;
+    gFieldEffectArguments[7] = FALSE; // don't skip to end of anim
+    FieldEffectStart(FLDEFF_AUTUMN_GRASS);
 }
 
 void GroundEffect_SpawnOnLongGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
@@ -10228,11 +10234,6 @@ void GroundEffect_Seaweed(struct ObjectEvent *objEvent, struct Sprite *sprite)
     FieldEffectStart(FLDEFF_BUBBLES);
 }
 
-void GroundEffect_AutumnGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
-{
-    DoAutumnGrassFieldEffect(objEvent, sprite);
-}
-
 static void (*const sGroundEffectFuncs[])(struct ObjectEvent *objEvent, struct Sprite *sprite) = {
     GroundEffect_SpawnOnTallGrass,      // GROUND_EFFECT_FLAG_TALL_GRASS_ON_SPAWN
     GroundEffect_StepOnTallGrass,       // GROUND_EFFECT_FLAG_TALL_GRASS_ON_MOVE
@@ -10254,7 +10255,8 @@ static void (*const sGroundEffectFuncs[])(struct ObjectEvent *objEvent, struct S
     GroundEffect_ShortGrass,            // GROUND_EFFECT_FLAG_SHORT_GRASS
     GroundEffect_HotSprings,            // GROUND_EFFECT_FLAG_HOT_SPRINGS
     GroundEffect_Seaweed,               // GROUND_EFFECT_FLAG_SEAWEED
-    GroundEffect_SpawnOnAutumnGrass,    // GROUND_EFFECT_FLAG_TALL_GRASS_ON_SPAWN
+    GroundEffect_SpawnOnAutumnGrass,    // GROUND_EFFECT_FLAG_AUTUMN_GRASS_ON_SPAWN
+    GroundEffect_StepOnAutumnGrass,     // GROUND_EFFECT_FLAG_AUTUMN_GRASS_ON_MOVE
 };
 
 static void DoFlaggedGroundEffects(struct ObjectEvent *objEvent, struct Sprite *sprite, u32 flags)
@@ -11043,13 +11045,6 @@ static void DoRippleFieldEffect(struct ObjectEvent *objectEvent, struct Sprite *
     gFieldEffectArguments[2] = 151;
     gFieldEffectArguments[3] = 3;
     FieldEffectStart(FLDEFF_RIPPLE);
-}
-
-static void DoAutumnGrassFieldEffect(struct ObjectEvent *objEvent, struct Sprite *sprite)
-{
-    gFieldEffectArguments[0] = objEvent->currentCoords.x;
-    gFieldEffectArguments[1] = objEvent->currentCoords.y;
-    FieldEffectStart(FLDEFF_AUTUMN_GRASS);
 }
 
 u8 (*const gMovementActionFuncs_LockAnim[])(struct ObjectEvent *, struct Sprite *) = {

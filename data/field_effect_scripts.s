@@ -84,7 +84,7 @@ gFieldEffectScriptPointers::
 	.4byte gFieldEffectScript_UseRockClimb              @ FLDEFF_USE_ROCK_CLIMB
 	.4byte gFieldEffectScript_RockClimbDust             @ FLDEFF_ROCK_CLIMB_DUST
 	.4byte gFieldEffectScript_ORASDowse                 @ FLDEFF_ORAS_DOWSE
-        .4byte gFieldEffectScript_AutumnGrass               @ FLDEFF_AUTUMN_GRASS
+    .4byte gFieldEffectScript_AutumnGrass               @ FLDEFF_AUTUMN_GRASS
 
 gFieldEffectScript_ExclamationMarkIcon1::
 	field_eff_callnative FldEff_ExclamationMarkIcon
