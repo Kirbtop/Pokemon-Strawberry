@@ -1079,6 +1079,7 @@ script LittlerootTown_EventScript_NovoJogo {
 	fadescreen(FADE_TO_BLACK)
 	special(RemoveCameraObject)
 	warp(MAP_LITTLEROOT_TOWN, 7, 32)
+	waitstate
     fadescreen(FADE_FROM_BLACK)
 	releaseall
 	end

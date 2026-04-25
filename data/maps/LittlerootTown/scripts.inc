@@ -2157,174 +2157,176 @@ LittlerootTown_EventScript_NovoJogo::
 # 1081 "data/maps/LittlerootTown/scripts.pory"
 	warp MAP_LITTLEROOT_TOWN, 7, 32
 # 1082 "data/maps/LittlerootTown/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	waitstate
 # 1083 "data/maps/LittlerootTown/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 1084 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	end
 
 
 LittlerootTown_EventScript_NovoJogo_PararMusica::
-# 1088 "data/maps/LittlerootTown/scripts.pory"
+# 1089 "data/maps/LittlerootTown/scripts.pory"
 	playbgm MUS_RG_TITLE, TRUE
 	end
 
 
-# 1092 "data/maps/LittlerootTown/scripts.pory"
+# 1093 "data/maps/LittlerootTown/scripts.pory"
 ComoAssim:
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_right
-# 1093 "data/maps/LittlerootTown/scripts.pory"
+# 1094 "data/maps/LittlerootTown/scripts.pory"
 	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
+	walk_faster_right
 # 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
-	walk_faster_down
-# 1094 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_right
+# 1095 "data/maps/LittlerootTown/scripts.pory"
 	walk_faster_down
 # 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	walk_faster_down
+# 1096 "data/maps/LittlerootTown/scripts.pory"
 	walk_slow_left
-# 1095 "data/maps/LittlerootTown/scripts.pory"
+# 1096 "data/maps/LittlerootTown/scripts.pory"
 	walk_slow_left
-# 1095 "data/maps/LittlerootTown/scripts.pory"
+# 1096 "data/maps/LittlerootTown/scripts.pory"
 	walk_slow_left
-# 1095 "data/maps/LittlerootTown/scripts.pory"
+# 1096 "data/maps/LittlerootTown/scripts.pory"
 	walk_slow_left
-# 1095 "data/maps/LittlerootTown/scripts.pory"
+# 1096 "data/maps/LittlerootTown/scripts.pory"
 	walk_slow_left
 	step_end
 
-# 1098 "data/maps/LittlerootTown/scripts.pory"
+# 1099 "data/maps/LittlerootTown/scripts.pory"
 ComoAssim2:
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
-# 1099 "data/maps/LittlerootTown/scripts.pory"
+# 1100 "data/maps/LittlerootTown/scripts.pory"
 	walk_left
 	step_end
