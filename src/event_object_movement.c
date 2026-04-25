@@ -9940,13 +9940,6 @@ void GroundEffect_SpawnOnTallGrass(struct ObjectEvent *objEvent, struct Sprite *
     FieldEffectStart(FLDEFF_TALL_GRASS);
 }
 
-void GroundEffect_SpawnOnAutumnGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
-{
-    gFieldEffectArguments[0] = objEvent->currentCoords.x;
-    gFieldEffectArguments[1] = objEvent->currentCoords.y;
-    FieldEffectStart(FLDEFF_AUTUMN_GRASS);
-}
-
 void GroundEffect_StepOnTallGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
 {
     gFieldEffectArguments[0] = objEvent->currentCoords.x;
@@ -10255,7 +10248,6 @@ static void (*const sGroundEffectFuncs[])(struct ObjectEvent *objEvent, struct S
     GroundEffect_ShortGrass,            // GROUND_EFFECT_FLAG_SHORT_GRASS
     GroundEffect_HotSprings,            // GROUND_EFFECT_FLAG_HOT_SPRINGS
     GroundEffect_Seaweed,               // GROUND_EFFECT_FLAG_SEAWEED
-    GroundEffect_SpawnOnAutumnGrass,    // GROUND_EFFECT_FLAG_AUTUMN_GRASS_ON_SPAWN
     GroundEffect_StepOnAutumnGrass,     // GROUND_EFFECT_FLAG_AUTUMN_GRASS_ON_MOVE
 };
 

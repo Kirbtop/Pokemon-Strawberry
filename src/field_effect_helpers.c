@@ -652,11 +652,29 @@ void UpdateAutumnGrassFieldEffect(struct Sprite *sprite)
         // Metatile behavior var re-used as subpriority
         metatileBehavior = 0;
         if (sprite->animCmdIndex == 0)
-            metatileBehavior = 4;
 
         UpdateObjectEventSpriteInvisibility(sprite, FALSE);
         UpdateGrassFieldEffectSubpriority(sprite, sprite->sElevation, metatileBehavior);
     }
+}
+
+u8 FindAutumnGrassFieldEffectSpriteId(u8 localId, u8 mapNum, u8 mapGroup, s16 x, s16 y)
+{
+    u8 i;
+    for (i = 0; i < MAX_SPRITES; i ++)
+    {
+        if (gSprites[i].inUse)
+        {
+            struct Sprite *sprite = &gSprites[i];
+            if (sprite->callback == UpdateAutumnGrassFieldEffect
+                && (x == sprite->sX && y == sprite->sY)
+                && localId == (u8)(sprite->sLocalId)
+                && mapNum == (sprite->sMapNum & 0xFF)
+                && mapGroup == sprite->sMapGroup)
+                return i;
+        }
+    }
+    return MAX_SPRITES;
 }
 
 #undef sElevation

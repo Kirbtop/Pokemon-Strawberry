@@ -11,6 +11,11 @@
 
 static const u32 sMugshotImg_Strawberry[] = INCBIN_U32("graphics/new_game/Strawberry.4bpp.lz");
 static const u16 sMugshotPal_Strawberry[] = INCBIN_U16("graphics/new_game/Strawberry.gbapal");
+static const u32 sMugshotImg_Intro1BR[] = INCBIN_U32("graphics/new_game/Intro1BR.4bpp.lz");
+static const u32 sMugshotImg_Intro2BR[] = INCBIN_U32("graphics/new_game/Intro2BR.4bpp.lz");
+static const u32 sMugshotImg_Intro1EN[] = INCBIN_U32("graphics/new_game/Intro1EN.4bpp.lz");
+static const u32 sMugshotImg_Intro2EN[] = INCBIN_U32("graphics/new_game/Intro2EN.4bpp.lz");
+static const u16 sMugshotPal_Intro[] = INCBIN_U16("graphics/new_game/Intro.gbapal");
 
 struct Mugshot{
     u8 x;
@@ -30,6 +35,10 @@ void FadeMugshotEntrace(void);
 
 static const struct Mugshot sMugshots[] = {
     [MUGSHOT_CUTSCENE_NEW_GAME] = {.x = 11, .y = 5, .width = 64, .height = 64, .image = sMugshotImg_Strawberry, .palette = sMugshotPal_Strawberry},
+    [MUGSHOT_CUTSCENE_INTRO1BR] = {.x = 12, .y = 7, .width = 48, .height = 32, .image = sMugshotImg_Intro1BR, .palette = sMugshotPal_Intro},
+    [MUGSHOT_CUTSCENE_INTRO2BR] = {.x = 11, .y = 7, .width = 64, .height = 32, .image = sMugshotImg_Intro2BR, .palette = sMugshotPal_Intro},
+    [MUGSHOT_CUTSCENE_INTRO1EN] = {.x = 12, .y = 7, .width = 48, .height = 32, .image = sMugshotImg_Intro1EN, .palette = sMugshotPal_Intro},
+    [MUGSHOT_CUTSCENE_INTRO2EN] = {.x = 11, .y = 7, .width = 64, .height = 32, .image = sMugshotImg_Intro2EN, .palette = sMugshotPal_Intro},
 };
 
 
