@@ -390,11 +390,11 @@ Route110_EventScript_RivalScene::
 	end
 
 Route110_EventScript_PlayMayMusic::
-	playbgm MUS_ENCOUNTER_MAY, TRUE
+	playbgm MUS_LUCAS_THEME, TRUE
 	return
 
 Route110_EventScript_PlayBrendanMusic::
-	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
+	playbgm MUS_MATIAS_THEME, TRUE
 	return
 
 Route110_EventScript_MayBattle::

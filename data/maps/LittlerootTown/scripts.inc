@@ -45,7 +45,7 @@ LittlerootTown_EventScript_NovoJogo::
 # 25 "data/maps/LittlerootTown/scripts.pory"
 	delay 10
 # 26 "data/maps/LittlerootTown/scripts.pory"
-	playbgm MUS_LITTLEROOT_TEST, TRUE
+	playbgm MUS_SANTANA_INTRO, TRUE
 # 27 "data/maps/LittlerootTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_CAMERA, ComoAssim3
 # 28 "data/maps/LittlerootTown/scripts.pory"

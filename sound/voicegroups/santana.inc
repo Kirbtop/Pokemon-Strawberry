@@ -1,4 +1,4 @@
-voice_group littleroot
+voice_group santana
 	voice_keysplit_all voicegroup_sb_drumset
 	voice_keysplit voicegroup_piano_keysplit, keysplit_piano
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0

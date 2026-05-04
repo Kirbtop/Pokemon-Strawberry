@@ -356,7 +356,7 @@ gSongTable::
 	song dummy_song_header, MUSIC_PLAYER_BGM, 0
 	song dummy_song_header, MUSIC_PLAYER_BGM, 0
 	song dummy_song_header, MUSIC_PLAYER_BGM, 0
-	song mus_littleroot_test, MUSIC_PLAYER_BGM, 0
+	song mus_santana_intro, MUSIC_PLAYER_BGM, 0
 	song mus_gsc_route38, MUSIC_PLAYER_BGM, 0
 	song mus_caught, MUSIC_PLAYER_BGM, 0
 	song mus_victory_wild, MUSIC_PLAYER_BGM, 0
@@ -365,7 +365,7 @@ gSongTable::
 	song mus_c_comm_center, MUSIC_PLAYER_BGM, 0
 	song mus_gsc_pewter, MUSIC_PLAYER_BGM, 0
 	song mus_c_vs_legend_beast, MUSIC_PLAYER_BGM, 0
-	song mus_route101, MUSIC_PLAYER_BGM, 0
+	song mus_route1, MUSIC_PLAYER_BGM, 0
 	song mus_route110, MUSIC_PLAYER_BGM, 0
 	song mus_route120, MUSIC_PLAYER_BGM, 0
 	song mus_petalburg, MUSIC_PLAYER_BGM, 0
@@ -389,7 +389,7 @@ gSongTable::
 	song mus_encounter_male, MUSIC_PLAYER_BGM, 0
 	song mus_abandoned_ship, MUSIC_PLAYER_BGM, 0
 	song mus_fortree, MUSIC_PLAYER_BGM, 0
-	song mus_birch_lab, MUSIC_PLAYER_BGM, 0
+	song mus_new_adventure, MUSIC_PLAYER_BGM, 0
 	song mus_b_tower_rs, MUSIC_PLAYER_BGM, 0
 	song mus_encounter_swimmer, MUSIC_PLAYER_BGM, 0
 	song mus_cave_of_origin, MUSIC_PLAYER_BGM, 0
@@ -411,7 +411,7 @@ gSongTable::
 	song mus_route119, MUSIC_PLAYER_BGM, 0
 	song mus_cycling, MUSIC_PLAYER_BGM, 0
 	song mus_poke_mart, MUSIC_PLAYER_BGM, 0
-	song mus_littleroot, MUSIC_PLAYER_BGM, 0
+	song mus_santana, MUSIC_PLAYER_BGM, 0
 	song mus_mt_chimney, MUSIC_PLAYER_BGM, 0
 	song mus_encounter_female, MUSIC_PLAYER_BGM, 0
 	song mus_lilycove, MUSIC_PLAYER_BGM, 0
@@ -421,13 +421,13 @@ gSongTable::
 	song mus_victory_trainer, MUSIC_PLAYER_BGM, 0
 	song mus_title, MUSIC_PLAYER_BGM, 0
 	song mus_intro, MUSIC_PLAYER_BGM, 0
-	song mus_encounter_may, MUSIC_PLAYER_BGM, 0
+	song mus_lucas_theme, MUSIC_PLAYER_BGM, 0
 	song mus_encounter_intense, MUSIC_PLAYER_BGM, 0
 	song mus_encounter_cool, MUSIC_PLAYER_BGM, 0
 	song mus_route113, MUSIC_PLAYER_BGM, 0
 	song mus_encounter_aqua, MUSIC_PLAYER_BGM, 0
 	song mus_follow_me, MUSIC_PLAYER_BGM, 0
-	song mus_encounter_brendan, MUSIC_PLAYER_BGM, 0
+	song mus_matias_theme, MUSIC_PLAYER_BGM, 0
 	song mus_ever_grande, MUSIC_PLAYER_BGM, 0
 	song mus_encounter_suspicious, MUSIC_PLAYER_BGM, 0
 	song mus_victory_aqua_magma, MUSIC_PLAYER_BGM, 0
@@ -515,12 +515,12 @@ gSongTable::
 	song mus_rg_route11, MUSIC_PLAYER_BGM, 0
 	song mus_rg_victory_road, MUSIC_PLAYER_BGM, 0
 	song mus_rg_vs_gym_leader, MUSIC_PLAYER_BGM, 0
-	song mus_rg_vs_trainer, MUSIC_PLAYER_BGM, 0
+	song mus_vs_lucas, MUSIC_PLAYER_BGM, 0
 	song mus_rg_vs_wild, MUSIC_PLAYER_BGM, 0
 	song mus_rg_vs_champion, MUSIC_PLAYER_BGM, 0
 	song mus_rg_pallet, MUSIC_PLAYER_BGM, 0
 	song mus_rg_oak_lab, MUSIC_PLAYER_BGM, 0
-	song mus_rg_oak, MUSIC_PLAYER_BGM, 0
+	song mus_moisesa_theme, MUSIC_PLAYER_BGM, 0
 	song mus_rg_poke_center, MUSIC_PLAYER_BGM, 0
 	song mus_rg_ss_anne, MUSIC_PLAYER_BGM, 0
 	song mus_rg_surf, MUSIC_PLAYER_BGM, 0

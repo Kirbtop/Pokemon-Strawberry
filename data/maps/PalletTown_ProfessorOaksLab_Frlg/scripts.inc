@@ -30,7 +30,7 @@ PalletTown_ProfessorOaksLab_EventScript_SetNationalDexSceneFinished::
 PalletTown_ProfessorOaksLab_EventScript_ReadyOakForStarterScene::
 	setobjectxyperm LOCALID_OAKS_LAB_PROF_OAK, 6, 11
 	setobjectmovementtype LOCALID_OAKS_LAB_PROF_OAK, MOVEMENT_TYPE_FACE_UP
-	savebgm MUS_RG_OAK
+	savebgm MUS_MOISESA_THEME
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_ReadyOakForNationalDexScene::

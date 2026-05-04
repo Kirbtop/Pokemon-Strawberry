@@ -23,7 +23,7 @@ script LittlerootTown_EventScript_NovoJogo {
 	delay(100)
 	fadescreen(FADE_FROM_BLACK)
 	delay(10)
-    playbgm(MUS_LITTLEROOT_TEST, TRUE)
+    playbgm(MUS_SANTANA_INTRO, TRUE)
 	applymovement(OBJ_EVENT_ID_CAMERA, ComoAssim3)
 	delay(100)
 	opendoor(31, 31)

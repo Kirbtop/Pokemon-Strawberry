@@ -4074,16 +4074,24 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
 
 
 #define SOUND_LIST_BGM              \
-    X(MUS_LITTLEROOT_TEST)          \
+    X(MUS_TITLE)                    \
+    X(MUS_NEW_ADVENTURE)            \
+    X(MUS_SANTANA_INTRO)            \
+    X(MUS_SANTANA)                  \
+    X(MUS_MOISESA_THEME)            \
+    X(MUS_MATIAS_THEME)             \
+    X(MUS_LUCAS_THEME)              \
+    X(MUS_VS_LUCAS)                 \
+    X(MUS_ROUTE1)                   \
+    X(MUS_VS_WILD)                  \
+    X(MUS_VICTORY_WILD)             \
     X(MUS_GSC_ROUTE38)              \
     X(MUS_CAUGHT)                   \
-    X(MUS_VICTORY_WILD)             \
     X(MUS_VICTORY_GYM_LEADER)       \
     X(MUS_VICTORY_LEAGUE)           \
     X(MUS_C_COMM_CENTER)            \
     X(MUS_GSC_PEWTER)               \
     X(MUS_C_VS_LEGEND_BEAST)        \
-    X(MUS_ROUTE101)                 \
     X(MUS_ROUTE110)                 \
     X(MUS_ROUTE120)                 \
     X(MUS_PETALBURG)                \
@@ -4107,7 +4115,6 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_ENCOUNTER_MALE)           \
     X(MUS_ABANDONED_SHIP)           \
     X(MUS_FORTREE)                  \
-    X(MUS_BIRCH_LAB)                \
     X(MUS_B_TOWER_RS)               \
     X(MUS_ENCOUNTER_SWIMMER)        \
     X(MUS_CAVE_OF_ORIGIN)           \
@@ -4129,7 +4136,6 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_ROUTE119)                 \
     X(MUS_CYCLING)                  \
     X(MUS_POKE_MART)                \
-    X(MUS_LITTLEROOT)               \
     X(MUS_MT_CHIMNEY)               \
     X(MUS_ENCOUNTER_FEMALE)         \
     X(MUS_LILYCOVE)                 \
@@ -4137,15 +4143,12 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_HELP)                     \
     X(MUS_UNDERWATER)               \
     X(MUS_VICTORY_TRAINER)          \
-    X(MUS_TITLE)                    \
     X(MUS_INTRO)                    \
-    X(MUS_ENCOUNTER_MAY)            \
     X(MUS_ENCOUNTER_INTENSE)        \
     X(MUS_ENCOUNTER_COOL)           \
     X(MUS_ROUTE113)                 \
     X(MUS_ENCOUNTER_AQUA)           \
     X(MUS_FOLLOW_ME)                \
-    X(MUS_ENCOUNTER_BRENDAN)        \
     X(MUS_EVER_GRANDE)              \
     X(MUS_ENCOUNTER_SUSPICIOUS)     \
     X(MUS_VICTORY_AQUA_MAGMA)       \
@@ -4198,7 +4201,6 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_VS_FRONTIER_BRAIN)        \
     X(MUS_VS_MEW)                   \
     X(MUS_B_DOME_LOBBY)             \
-    X(MUS_VS_WILD)                  \
     X(MUS_VS_AQUA_MAGMA)            \
     X(MUS_VS_TRAINER)               \
     X(MUS_VS_GYM_LEADER)            \
@@ -4233,12 +4235,10 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_RG_ROUTE11)               \
     X(MUS_RG_VICTORY_ROAD)          \
     X(MUS_RG_VS_GYM_LEADER)         \
-    X(MUS_RG_VS_TRAINER)            \
     X(MUS_RG_VS_WILD)               \
     X(MUS_RG_VS_CHAMPION)           \
     X(MUS_RG_PALLET)                \
     X(MUS_RG_OAK_LAB)               \
-    X(MUS_RG_OAK)                   \
     X(MUS_RG_POKE_CENTER)           \
     X(MUS_RG_SS_ANNE)               \
     X(MUS_RG_SURF)                  \
