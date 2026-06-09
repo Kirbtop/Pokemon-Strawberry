@@ -83,7 +83,7 @@ script LittlerootTown_EventScript_NovoJogo {
 	special(RemoveCameraObject)
 	setvar(VAR_LITTLEROOT_INTRO_STATE, 1)
 	delay(20)
-	warp(MAP_LITTLEROOT_TOWN, 7, 32)
+	warp(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 4, 5)
 	waitstate
     fadescreen(FADE_FROM_BLACK)
 	releaseall

@@ -165,7 +165,7 @@ LittlerootTown_EventScript_NovoJogo::
 # 85 "data/maps/LittlerootTown/scripts.pory"
 	delay 20
 # 86 "data/maps/LittlerootTown/scripts.pory"
-	warp MAP_LITTLEROOT_TOWN, 7, 32
+	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 4, 5
 # 87 "data/maps/LittlerootTown/scripts.pory"
 	waitstate
 # 88 "data/maps/LittlerootTown/scripts.pory"
