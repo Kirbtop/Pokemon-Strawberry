@@ -1737,3 +1737,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/dexnav.inc"
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
+
+	.include "data/maps/LittlerootTown_KaiosHouse_2F/scripts.inc"
+
+	.include "data/maps/LittlerootTown_KaiosHouse_1F/scripts.inc"

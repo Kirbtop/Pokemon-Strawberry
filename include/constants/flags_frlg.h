@@ -2022,7 +2022,7 @@
 #define FLAG_HIDE_MEW                                               0
 #define FLAG_HIDE_ROUTE_104_RIVAL                                   0
 #define FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE                  0
-#define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH                  0
+#define FLAG_HIDE_SANTANA_MOISESA                  0
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM          0
 #define FLAG_HIDE_ROUTE_103_RIVAL                                   0
 #define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0

@@ -360,8 +360,12 @@ const u32 gObjectEventPic_Noland[] = INCBIN_U32("graphics/object_events/pics/peo
 const u32 gObjectEventPic_Lucy[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/lucy.4bpp");
 const u32 gObjectEventPic_Brandon[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/brandon.4bpp");
 const u32 gObjectEventPic_PokeBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_poke.4bpp");
+
+// Sprites Strawberry
 const u32 gFieldEffectObjectPic_AutumnGrass[] = INCBIN_U32("graphics/field_effects/pics/autumn_grass.4bpp");
 const u16 gFieldEffectPal_AutumnGrass[] = INCBIN_U16("graphics/field_effects/palettes/autumn_grass.gbapal");
+const u32 gObjectEventPic_Rosana[] = INCBIN_U32("graphics/object_events/pics/people/rosana.4bpp");
+const u32 gObjectEventPic_Maple[] = INCBIN_U32("graphics/object_events/pics/people/maple.4bpp");
 
 const u32 gObjectEventPic_DeoxysOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/deoxys.4bpp");
 const u32 gObjectEventPic_MewOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/mew.4bpp");
@@ -471,6 +475,7 @@ const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effe
 const u32 gObjectEventPic_ApricornTree[] = INCBIN_U32("graphics/object_events/pics/misc/apricorn_tree.4bpp");
 
 const u16 gObjectEventPal_ImportantNPC[] = INCBIN_U16("graphics/object_events/palettes/important_npc1.gbapal");
+const u16 gObjectEventPal_ImportantBNPC[] = INCBIN_U16("graphics/object_events/palettes/important_bnpc1.gbapal");
 #if IS_FRLG
 
 const u16 gObjectEventPic_RedNormal[] = INCBIN_U16("graphics/object_events/pics/people/red/red_normal.4bpp");
