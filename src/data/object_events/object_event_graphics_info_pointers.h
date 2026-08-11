@@ -404,6 +404,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTre
 // Sprites Strawberry
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rosana;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Maple;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kaio;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -652,6 +653,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     //strawberry sprite
     [OBJ_EVENT_GFX_ROSANA] =                   &gObjectEventGraphicsInfo_Rosana,
     [OBJ_EVENT_GFX_MAPLE] =                    &gObjectEventGraphicsInfo_Maple,
+    [OBJ_EVENT_GFX_KAIO] =                     &gObjectEventGraphicsInfo_Kaio,
     #if IS_FRLG
     [OBJ_EVENT_GFX_RED_NORMAL] =               &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE] =                 &gObjectEventGraphicsInfo_RedBike,

@@ -1,0 +1,35 @@
+raw `
+LittlerootTown_MaysHouse_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, LittlerootTown_MaysHouse_1F_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_MaysHouse_1F_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_MaysHouse_1F_OnFrame
+	.byte 0
+
+LittlerootTown_MaysHouse_1F_OnLoad:
+	end
+
+LittlerootTown_MaysHouse_1F_OnTransition:
+	end
+
+LittlerootTown_MaysHouse_1F_OnFrame:
+	.2byte 0
+`
+
+script TrocarTVCor {
+    lockall
+    setmetatile(9, 1, METATILE_BrendansMaysHouse_Orange_TV1, 0)
+    setmetatile(10, 1, METATILE_BrendansMaysHouse_Orange_TV2, 0)
+    setmetatile(9, 2, METATILE_BrendansMaysHouse_Orange_TV3, 0)
+    setmetatile(10, 2, METATILE_BrendansMaysHouse_Orange_TV4, 0)
+    special(DrawWholeMapView)
+    delay(50)
+    msgbox("Ei! Eu tava vendo azul!!")
+    delay(100)
+    closemessage
+    setmetatile(9, 1, METATILE_BrendansMaysHouse_Blue_TV1, 0)
+    setmetatile(10, 1, METATILE_BrendansMaysHouse_Blue_TV2, 0)
+    setmetatile(9, 2, METATILE_BrendansMaysHouse_Blue_TV3, 0)
+    setmetatile(10, 2, METATILE_BrendansMaysHouse_Blue_TV4, 0)
+    special(DrawWholeMapView)
+    releaseall
+}

@@ -16,6 +16,8 @@ static const u32 sMugshotImg_Intro2BR[] = INCBIN_U32("graphics/new_game/Intro2BR
 static const u32 sMugshotImg_Intro1EN[] = INCBIN_U32("graphics/new_game/Intro1EN.4bpp.lz");
 static const u32 sMugshotImg_Intro2EN[] = INCBIN_U32("graphics/new_game/Intro2EN.4bpp.lz");
 static const u16 sMugshotPal_Intro[] = INCBIN_U16("graphics/new_game/Intro.gbapal");
+static const u32 sMugshotImg_Togepi[] = INCBIN_U32("graphics/mugshot/others/togepi.4bpp.lz");
+static const u16 sMugshotPal_Togepi[] = INCBIN_U16("graphics/mugshot/others/pal/paper.gbapal");
 
 struct Mugshot{
     u8 x;
@@ -39,6 +41,7 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_CUTSCENE_INTRO2BR] = {.x = 11, .y = 7, .width = 64, .height = 32, .image = sMugshotImg_Intro2BR, .palette = sMugshotPal_Intro},
     [MUGSHOT_CUTSCENE_INTRO1EN] = {.x = 12, .y = 7, .width = 48, .height = 32, .image = sMugshotImg_Intro1EN, .palette = sMugshotPal_Intro},
     [MUGSHOT_CUTSCENE_INTRO2EN] = {.x = 11, .y = 7, .width = 64, .height = 32, .image = sMugshotImg_Intro2EN, .palette = sMugshotPal_Intro},
+    [MUGSHOT_PAPER_TOGEPI] = {.x = 11, .y = 5, .width = 48, .height = 64, .image = sMugshotImg_Togepi, .palette = sMugshotPal_Togepi},
 };
 
 

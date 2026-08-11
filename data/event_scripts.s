@@ -1245,13 +1245,13 @@ Common_EventScript_OutOfCenterPartyHeal::
 	return
 
 EventScript_RegionMap::
-	lockall
-	msgbox Common_Text_LookCloserAtMap, MSGBOX_DEFAULT
-	fadescreen FADE_TO_BLACK
-	special FieldShowRegionMap
-	waitstate
-	releaseall
-	end
+	@lockall
+	@msgbox Common_Text_LookCloserAtMap, MSGBOX_DEFAULT
+	@fadescreen FADE_TO_BLACK
+	@special FieldShowRegionMap
+	@waitstate
+	@releaseall
+	@end
 
 Common_EventScript_PlayBrineysBoatMusic::
 	setflag FLAG_DONT_TRANSITION_MUSIC

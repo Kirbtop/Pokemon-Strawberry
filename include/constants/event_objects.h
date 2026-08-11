@@ -428,8 +428,9 @@
 
 #define OBJ_EVENT_GFX_ROSANA                     389
 #define OBJ_EVENT_GFX_MAPLE                      390
+#define OBJ_EVENT_GFX_KAIO                       391
 
-#define NUM_OBJ_EVENT_GFX                        391
+#define NUM_OBJ_EVENT_GFX                        392
 
 
 // These are dynamic object gfx ids.
@@ -575,7 +576,8 @@
 #define OBJ_EVENT_PAL_TAG_SEAGALLOP               0x1132
 #define OBJ_EVENT_PAL_TAG_SS_ANNE                 0x1133
 #define OBJ_EVENT_PAL_TAG_IMPORTANT_NPC           0x1134
-#define OBJ_EVENT_PAL_TAG_IMPORTANT_BNPC          0x1135
+#define OBJ_EVENT_PAL_TAG_IMPORTANT_NPC2          0x1135
+#define OBJ_EVENT_PAL_TAG_IMPORTANT_BNPC          0x1136
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

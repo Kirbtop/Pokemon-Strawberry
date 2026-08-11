@@ -1371,6 +1371,10 @@ static const struct SpriteFrameImage sPicTable_Maple[] = {
     overworld_ascending_frames(gObjectEventPic_Maple, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_Kaio[] = {
+    overworld_ascending_frames(gObjectEventPic_Kaio, 2, 4),
+};
+
 #if IS_FRLG
 
 static const struct SpriteFrameImage sPicTable_RedNormal[] = {
