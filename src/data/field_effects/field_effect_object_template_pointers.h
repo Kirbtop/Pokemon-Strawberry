@@ -44,7 +44,9 @@ extern const struct SpriteTemplate gFieldEffectObjectTemplate_RockClimbBlob;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_RockClimbDust;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_ORASDowsingBrendan;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_ORASDowsingMay;
+//Strawberry Template
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_AutumnGrass;
+extern const struct SpriteTemplate gFieldEffectObjectTemplate_AutumnDandelion;
 
 const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[] = {
     [FLDEFFOBJ_SHADOW_S]              = &gFieldEffectObjectTemplate_ShadowSmall,
@@ -93,4 +95,5 @@ const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[] = {
     [FLDEFFOBJ_ORAS_DOWSE_BRENDAN]    = &gFieldEffectObjectTemplate_ORASDowsingBrendan,
     [FLDEFFOBJ_ORAS_DOWSE_MAY]        = &gFieldEffectObjectTemplate_ORASDowsingMay,
     [FLDEFFOBJ_AUTUMN_GRASS]          = &gFieldEffectObjectTemplate_AutumnGrass,
+    [FLDEFFOBJ_AUTUMN_DANDELION]      = &gFieldEffectObjectTemplate_AutumnDandelion,
 };

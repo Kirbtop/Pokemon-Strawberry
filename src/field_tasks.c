@@ -57,6 +57,9 @@ static void CrackedFloorPerStepCallback(u8);
 static void IcefallCaveIcePerStepCallback(u8);
 static void Task_MuddySlope(u8);
 
+//strawberry Callback
+static void AutumnDandelionPerStepCallback(u8);
+
 static const TaskFunc sPerStepCallbacks[] =
 {
     [STEP_CB_DUMMY]             = DummyPerStepCallback,
@@ -67,7 +70,8 @@ static const TaskFunc sPerStepCallbacks[] =
     [STEP_CB_TRUCK]             = EndTruckSequence,
     [STEP_CB_SECRET_BASE]       = SecretBasePerStepCallback,
     [STEP_CB_CRACKED_FLOOR]     = CrackedFloorPerStepCallback,
-    [STEP_CB_ICEFALL_CAVE]      = IcefallCaveIcePerStepCallback
+    [STEP_CB_ICEFALL_CAVE]      = IcefallCaveIcePerStepCallback,
+    [STEP_CB_AUTUMN_DANDELION]  = AutumnDandelionPerStepCallback
 };
 
 // The positions of each map space with crackable ice in Icefall Cave.
@@ -1086,3 +1090,34 @@ static void IcefallCaveIcePerStepCallback(u8 taskId)
 #undef tIceX
 #undef tIceY
 #undef tDelay
+
+#define tPrevX data[1]
+#define tPrevY data[2]
+
+static void AutumnDandelionPerStepCallback(u8 taskId)
+{
+    s16 x, y;
+    s16 *data = gTasks[taskId].data;
+    PlayerGetDestCoords(&x, &y);
+
+    if (x == tPrevX && y == tPrevY)
+    {
+        DebugPrintf("Aquifoi1");
+        return;
+    }
+
+    tPrevX = x;
+    tPrevY = y;
+    DebugPrintf("Aquifoi2");
+    if (MetatileBehavior_IsAutumnDandelion(MapGridGetMetatileBehaviorAt(x, y)))
+    {
+        if (MapGridGetMetatileIdAt(x, y) == METATILE_Petalburg_Dandelion)
+        {
+            StartDandelionEffect(x, y, METATILE_Petalburg_DandelionNoWhite, 4);
+            DebugPrintf("Aquifoi3");
+        }
+    }
+}
+
+#undef tPrevX
+#undef tPrevY

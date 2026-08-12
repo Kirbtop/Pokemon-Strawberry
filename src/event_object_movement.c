@@ -154,6 +154,7 @@ static void GetGroundEffectFlags_Puddle(struct ObjectEvent *, u32 *);
 static void GetGroundEffectFlags_Ripple(struct ObjectEvent *, u32 *);
 static void GetGroundEffectFlags_Seaweed(struct ObjectEvent *, u32 *);
 static void GetGroundEffectFlags_JumpLanding(struct ObjectEvent *, u32 *);
+static void GetGroundEffectFlags_AutumnDandelion(struct ObjectEvent *, u32 *);
 static void GetGroundEffectFlags_AutumnGrassOnBeginStep(struct ObjectEvent *, u32 *);
 static u8 ObjectEventGetNearbyReflectionType(struct ObjectEvent *);
 static u8 GetReflectionTypeByMetatileBehavior(u32);
@@ -9686,6 +9687,7 @@ static void GetAllGroundEffectFlags_OnBeginStep(struct ObjectEvent *objEvent, u3
     GetGroundEffectFlags_Puddle(objEvent, flags);
     GetGroundEffectFlags_ShortGrass(objEvent, flags);
     GetGroundEffectFlags_HotSprings(objEvent, flags);
+    // Strawberry GetGroundEffectFlags
     GetGroundEffectFlags_AutumnGrassOnBeginStep(objEvent, flags);
 }
 
@@ -9700,6 +9702,8 @@ static void GetAllGroundEffectFlags_OnFinishStep(struct ObjectEvent *objEvent, u
     GetGroundEffectFlags_HotSprings(objEvent, flags);
     GetGroundEffectFlags_Seaweed(objEvent, flags);
     GetGroundEffectFlags_JumpLanding(objEvent, flags);
+    // Strawberry GetGroundEffectFlags
+    GetGroundEffectFlags_AutumnDandelion(objEvent, flags);
 }
 
 static void ObjectEventUpdateMetatileBehaviors(struct ObjectEvent *objEvent)
@@ -10406,6 +10410,19 @@ void GroundEffect_Seaweed(struct ObjectEvent *objEvent, struct Sprite *sprite)
     FieldEffectStart(FLDEFF_BUBBLES);
 }
 
+static void GetGroundEffectFlags_AutumnDandelion(struct ObjectEvent *objEvent, u32 *flags)
+{
+    if (MetatileBehavior_IsAutumnDandelion(objEvent->currentMetatileBehavior))
+        *flags |= GROUND_EFFECT_FLAG_AUTUMN_DANDELION;
+}
+
+void GroundEffect_AutumnDandelion(struct ObjectEvent *objEvent, struct Sprite *sprite)
+{
+    gFieldEffectArguments[0] = objEvent->currentCoords.x;
+    gFieldEffectArguments[1] = objEvent->currentCoords.y;
+    FieldEffectStart(FLDEFF_AUTUMN_DANDELION);
+}
+
 static void (*const sGroundEffectFuncs[])(struct ObjectEvent *objEvent, struct Sprite *sprite) = {
     GroundEffect_SpawnOnTallGrass,      // GROUND_EFFECT_FLAG_TALL_GRASS_ON_SPAWN
     GroundEffect_StepOnTallGrass,       // GROUND_EFFECT_FLAG_TALL_GRASS_ON_MOVE
@@ -10427,7 +10444,9 @@ static void (*const sGroundEffectFuncs[])(struct ObjectEvent *objEvent, struct S
     GroundEffect_ShortGrass,            // GROUND_EFFECT_FLAG_SHORT_GRASS
     GroundEffect_HotSprings,            // GROUND_EFFECT_FLAG_HOT_SPRINGS
     GroundEffect_Seaweed,               // GROUND_EFFECT_FLAG_SEAWEED
+    //Strawberry Ground Effects
     GroundEffect_StepOnAutumnGrass,     // GROUND_EFFECT_FLAG_AUTUMN_GRASS_ON_MOVE
+    GroundEffect_AutumnDandelion,       // GROUND_EFFECT_FLAG_AUTUMN_DANDELION_ON_MOVE
 };
 
 static void DoFlaggedGroundEffects(struct ObjectEvent *objEvent, struct Sprite *sprite, u32 flags)

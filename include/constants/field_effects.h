@@ -83,7 +83,9 @@
 #define FLDEFF_SMILEY_FACE_ICON          78
 #define FLDEFF_HALL_OF_FAME_RECORD_FRLG  79
 #define FLDEFF_PHOTO_FLASH               80
+//Strawberry FLDEFF
 #define FLDEFF_AUTUMN_GRASS              81
+#define FLDEFF_AUTUMN_DANDELION          82
 
 #define FLDEFFOBJ_SHADOW_S              0
 #define FLDEFFOBJ_SHADOW_M              1
@@ -130,7 +132,9 @@
 #define FLDEFFOBJ_ROCK_CLIMB_DUST       42
 #define FLDEFFOBJ_ORAS_DOWSE_BRENDAN    43
 #define FLDEFFOBJ_ORAS_DOWSE_MAY        44
+//Strawberry FLDEFFOBJ
 #define FLDEFFOBJ_AUTUMN_GRASS          45
+#define FLDEFFOBJ_AUTUMN_DANDELION      46
 
 #define FLDEFF_PAL_TAG_CUT_GRASS          0x1000
 #define FLDEFF_PAL_TAG_SECRET_POWER_TREE  0x1003

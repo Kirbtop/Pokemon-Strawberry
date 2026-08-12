@@ -1447,6 +1447,8 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_RockClimbDust = {
     .callback = UpdateJumpImpactEffect,
 };
 
+// Strawberry Sprites
+
 const struct SpritePalette gSpritePalette_BigDust = {gFieldEffectPal_DustCloud, FLDEFF_PAL_TAG_DUST_CLOUD};
 
 static const struct SpriteFrameImage sPicTable_AutumnGrass[] = {
@@ -1483,3 +1485,42 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_AutumnGrass = {
 };
 
 const struct SpritePalette gSpritePalette_AutumnGrass = {gFieldEffectPal_AutumnGrass, FLDEFF_PAL_TAG_AUTUMN_GRASS};
+
+static const struct SpriteFrameImage sPicTable_AutumnDandelion[] = {
+    overworld_frame(gFieldEffectObjectPic_AutumnDandelion, 2, 4, 0),
+    overworld_frame(gFieldEffectObjectPic_AutumnDandelion, 2, 4, 1),
+    overworld_frame(gFieldEffectObjectPic_AutumnDandelion, 2, 4, 2),
+    overworld_frame(gFieldEffectObjectPic_AutumnDandelion, 2, 4, 3),
+    overworld_frame(gFieldEffectObjectPic_AutumnDandelion, 2, 4, 4),
+    overworld_frame(gFieldEffectObjectPic_AutumnDandelion, 2, 4, 5),
+    overworld_frame(gFieldEffectObjectPic_AutumnDandelion, 2, 4, 6),
+    overworld_frame(gFieldEffectObjectPic_AutumnDandelion, 2, 4, 7),
+};
+
+static const union AnimCmd sAnim_AutumnDandelion[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(1, 4),
+    ANIMCMD_FRAME(2, 4),
+    ANIMCMD_FRAME(3, 6),
+    ANIMCMD_FRAME(4, 6),
+    ANIMCMD_FRAME(5, 4),
+    ANIMCMD_FRAME(6, 4),
+    ANIMCMD_FRAME(7, 4),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnimTable_AutumnDandelion[] =
+{
+    sAnim_AutumnDandelion,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_AutumnDandelion = {
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_AUTUMN_GRASS,
+    .oam = &gObjectEventBaseOam_16x32,
+    .anims = sAnimTable_AutumnDandelion,
+    .images = sPicTable_AutumnDandelion,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateAutumnDandelionFieldEffect,
+};

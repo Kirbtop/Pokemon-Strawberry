@@ -46,5 +46,7 @@ void ShowWarpArrowSprite(u8 spriteId, enum Direction direction, s16 x, s16 y);
 
 u32 FldEff_TallGrass(void);
 u8 FindAutumnGrassFieldEffectSpriteId(u8 localId, u8 mapNum, u8 mapGroup, s16 x, s16 y);
+void UpdateAutumnDandelionFieldEffect(struct Sprite *sprite);
+void StartDandelionEffect(s16 x, s16 y, u16 metatileId, s16 delay);
 
 #endif //GUARD_FIELD_EFFECT_HELPERS_H

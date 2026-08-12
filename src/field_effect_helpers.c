@@ -1989,3 +1989,60 @@ static void UpdateGrassFieldEffectSubpriority(struct Sprite *sprite, u8 elevatio
         }
     }
 }
+
+#define sState      data[0]
+#define sX          data[1]
+#define sY          data[2]
+#define sMetatileId data[3]
+#define sDelay      data[4]
+
+void StartDandelionEffect(s16 x, s16 y, u16 metatileId, s16 delay)
+{
+    gFieldEffectArguments[0] = x;
+    gFieldEffectArguments[1] = y;
+    gFieldEffectArguments[2] = 82; // subpriority
+    gFieldEffectArguments[3] = 1; // priority
+    gFieldEffectArguments[4] = metatileId;
+    gFieldEffectArguments[5] = delay;
+    FieldEffectStart(FLDEFF_AUTUMN_DANDELION);
+}
+
+#undef sLocalId
+#undef sMapNum
+#undef sMapGroup
+#undef sPrevX
+#undef sPrevY
+
+u32 FldEff_AutumnDandelion(void)
+{
+    u8 spriteId;
+
+    s16 x = gFieldEffectArguments[0];
+    s16 y = gFieldEffectArguments[1];
+    u16 metatileId = gFieldEffectArguments[4];
+
+    MapGridSetMetatileIdAt(x, y, metatileId);
+    CurrentMapDrawMetatileAt(x, y);
+
+    SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 0);
+    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_AUTUMN_DANDELION], gFieldEffectArguments[0], gFieldEffectArguments[1], 82);
+    if (spriteId != MAX_SPRITES)
+    {
+        struct Sprite *sprite = &gSprites[spriteId];
+        sprite->coordOffsetEnabled = TRUE;
+        sprite->oam.priority = 1;
+    }
+    return 0;
+}
+
+#define sY data[0]
+
+void UpdateAutumnDandelionFieldEffect(struct Sprite *sprite)
+{
+    sprite->sY += ((1 << 8) / 2);
+    sprite->sY &= (1 << 8);
+    sprite->y -= sprite->sY >> 8;
+    UpdateObjectEventSpriteInvisibility(sprite, FALSE);
+    if (sprite->invisible || sprite->animEnded)
+        FieldEffectStop(sprite, FLDEFF_AUTUMN_DANDELION);
+}

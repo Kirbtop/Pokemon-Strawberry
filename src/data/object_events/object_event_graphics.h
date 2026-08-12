@@ -364,6 +364,7 @@ const u32 gObjectEventPic_PokeBall[] = INCBIN_U32("graphics/object_events/pics/m
 // Sprites Strawberry
 const u32 gFieldEffectObjectPic_AutumnGrass[] = INCBIN_U32("graphics/field_effects/pics/autumn_grass.4bpp");
 const u16 gFieldEffectPal_AutumnGrass[] = INCBIN_U16("graphics/field_effects/palettes/autumn_grass.gbapal");
+const u32 gFieldEffectObjectPic_AutumnDandelion[] = INCBIN_U32("graphics/field_effects/pics/autumn_dandelion.4bpp");
 const u32 gObjectEventPic_Rosana[] = INCBIN_U32("graphics/object_events/pics/people/rosana.4bpp");
 const u32 gObjectEventPic_Maple[] = INCBIN_U32("graphics/object_events/pics/people/maple.4bpp");
 const u32 gObjectEventPic_Kaio[] = INCBIN_U32("graphics/object_events/pics/people/kaio.4bpp");

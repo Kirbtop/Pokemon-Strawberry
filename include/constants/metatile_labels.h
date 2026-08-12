@@ -468,6 +468,8 @@
 #define METATILE_PalletTown_OaksLabDoor  0x2AC
 
 // gTileset_Petalburg
+#define METATILE_Petalburg_Dandelion         0x837
+#define METATILE_Petalburg_DandelionNoWhite  0x84C
 #define METATILE_Petalburg_Door_BirchsLab    0x849
 #define METATILE_Petalburg_Door_Littleroot   0x848
 #define METATILE_Petalburg_Door_Maple_Ranch  0x8AB

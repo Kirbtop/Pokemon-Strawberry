@@ -1090,6 +1090,9 @@ $(FLDEFFGFXDIR)/spot_tracks.4bpp: %.4bpp: %.png
 $(FLDEFFGFXDIR)/bubbles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(FLDEFFGFXDIR)/autumn_dandelion.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 $(FLDEFFGFXDIR)/deep_sand_footprints.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
 

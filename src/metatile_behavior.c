@@ -138,6 +138,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_CYCLING_ROAD_PULL_DOWN_GRASS]       = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_FAST_WATER]                         = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_CYCLING_ROAD_WATER]                 = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
+    [MB_AUTUMN_DANDELION]                   = TILE_FLAG_UNUSED
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -1826,9 +1827,19 @@ bool8 MetatileBehavior_IsTrainerTowerMonitor(u8 metatileBehavior)
         return FALSE;
 }
 
+//Strawberry Fields
+
 bool8 MetatileBehavior_IsAutumnGrass(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_AUTUMN_GRASS)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsAutumnDandelion(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_AUTUMN_DANDELION)
         return TRUE;
     else
         return FALSE;
