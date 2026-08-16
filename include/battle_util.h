@@ -52,6 +52,8 @@ enum AbilityEffect
     ABILITYEFFECT_MOVE_END_OTHER,
     ABILITYEFFECT_MOVE_END_FOES_FAINTED, // Moxie-like abilities / Battle Bond / Magician
 
+    ABILITYEFFECT_ON_FORM_CHANGE,
+
     // On Switch in
     ABILITYEFFECT_TERA_SHIFT,
     ABILITYEFFECT_NEUTRALIZINGGAS,
@@ -408,6 +410,7 @@ bool32 HasPartnerTrainer(enum BattlerId battler);
 bool32 IsAffectedByPowderMove(enum BattlerId battler, enum Ability ability, enum HoldEffect holdEffect);
 enum Move GetNaturePowerMove(void);
 void RemoveAbilityFlags(enum BattlerId battler);
+void RemoveRuinAbilityFlags(enum BattlerId battler);
 void CheckSetUnburden(enum BattlerId battler);
 bool32 IsDazzlingAbility(enum Ability ability);
 bool32 IsAllowedToUseBag(void);
