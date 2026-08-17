@@ -362,7 +362,7 @@ const u32 gObjectEventPic_Brandon[] = INCGFX_U32("graphics/object_events/pics/pe
 const u32 gObjectEventPic_PokeBall[] = INCGFX_U32("graphics/object_events/pics/misc/ball_poke.png", ".4bpp", "-mwidth 2 -mheight 4");
 
 // Sprites Strawberry
-const u32 gFieldEffectObjectPic_AutumnGrass[] = INCGFX_U32("graphics/field_effects/pics/autumn_grass.4bpp");
+const u32 gFieldEffectObjectPic_AutumnGrass[] = INCGFX_U32("graphics/field_effects/pics/autumn_grass.png", ".4bpp", "-mwidth 2 -mheight 2");
 const u16 gFieldEffectPal_AutumnGrass[] = INCGFX_U16("graphics/field_effects/palettes/autumn_grass.pal", ".gbapal");
 const u32 gFieldEffectObjectPic_AutumnDandelion[] = INCGFX_U32("graphics/field_effects/pics/autumn_dandelion.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_Rosana[] = INCGFX_U32("graphics/object_events/pics/people/rosana.png", ".4bpp", "-mwidth 2 -mheight 4");
