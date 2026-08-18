@@ -1102,19 +1102,16 @@ static void AutumnDandelionPerStepCallback(u8 taskId)
 
     if (x == tPrevX && y == tPrevY)
     {
-        DebugPrintf("Aquifoi1");
         return;
     }
 
     tPrevX = x;
     tPrevY = y;
-    DebugPrintf("Aquifoi2");
     if (MetatileBehavior_IsAutumnDandelion(MapGridGetMetatileBehaviorAt(x, y)))
     {
         if (MapGridGetMetatileIdAt(x, y) == METATILE_Petalburg_Dandelion)
         {
             StartDandelionEffect(x, y, METATILE_Petalburg_DandelionNoWhite, 4);
-            DebugPrintf("Aquifoi3");
         }
     }
 }

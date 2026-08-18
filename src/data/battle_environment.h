@@ -403,6 +403,22 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .battleIntroSlide = PLAIN_BATTLE_INTRO_SLIDE,
     },
 
+        //Strawberry Environment
+
+    [BATTLE_ENVIRONMENT_AUTUMN] =
+    {
+        .name = _("Autumn"),
+        .naturePower = MOVE_ENERGY_BALL,
+        .secretPowerAnimation = gBattleAnimMove_NeedleArm,
+        .secretPowerEffect = B_SECRET_POWER_EFFECT >= GEN_4 ? MOVE_EFFECT_SLEEP : MOVE_EFFECT_POISON,
+        .camouflageType = TYPE_GRASS,
+        .camouflageBlend = RGB(72, 24, 2),
+        .entry = ENVIRONMENT_ENTRY(Autumn),
+        .background = ENVIRONMENT_BACKGROUND(Autumn),
+        .palette = gBattleEnvironmentPalette_Autumn,
+        .battleIntroSlide = BattleIntroSlide1,
+    },
+
     [BATTLE_ENVIRONMENT_SOARING] =
     {
         .name = _("Soaring"),

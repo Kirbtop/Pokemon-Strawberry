@@ -727,6 +727,10 @@ enum BattleEnvironments BattleSetup_GetEnvironmentId(void)
         return BATTLE_ENVIRONMENT_LONG_GRASS;
     if (MetatileBehavior_IsSandOrDeepSand(tileBehavior))
         return BATTLE_ENVIRONMENT_SAND;
+    if (MetatileBehavior_IsAutumnGrass(tileBehavior)) {
+        DebugPrintf("Aqui foi");
+        return BATTLE_ENVIRONMENT_AUTUMN;
+    }
 
     switch (gMapHeader.mapType)
     {

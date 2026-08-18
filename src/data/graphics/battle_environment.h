@@ -86,3 +86,12 @@ const u32 gBattleEnvironmentAnimTilemap_Building[] = INCGFX_U32("graphics/battle
 
 const u32 gBattleEnvironmentAnimTiles_Rayquaza[] = INCGFX_U32("graphics/battle_environment/sky/anim_tiles.png", ".4bpp.smol");
 const u32 gBattleEnvironmentAnimTilemap_Rayquaza[] = INCGFX_U32("graphics/battle_environment/sky/anim_map.bin", ".smolTM");
+
+// Strawberry Environment
+
+const u32 gBattleEnvironmentTiles_Autumn[] = INCGFX_U32("graphics/battle_environment/autumn/tiles.png", ".4bpp.smol");
+const u16 gBattleEnvironmentPalette_Autumn[] = INCGFX_U16("graphics/battle_environment/autumn/palette.pal", ".gbapal");
+const u32 gBattleEnvironmentTilemap_Autumn[] = INCGFX_U32("graphics/battle_environment/autumn/map.bin", ".smolTM");
+
+const u32 gBattleEnvironmentAnimTiles_Autumn[] = INCGFX_U32("graphics/battle_environment/autumn/anim_tiles.png", ".4bpp.smol");
+const u32 gBattleEnvironmentAnimTilemap_Autumn[] = INCGFX_U32("graphics/battle_environment/autumn/anim_map.bin", ".smolTM");
