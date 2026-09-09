@@ -73,7 +73,10 @@ static void QueueAnimTiles_MauvilleGym_ElectricGates(u16);
 static void QueueAnimTiles_SootopolisGym_Waterfalls(u16);
 static void QueueAnimTiles_EliteFour_GroundLights(u16);
 static void QueueAnimTiles_EliteFour_WallLights(u16);
+// Strawberry Tileset Anims
+static void QueueAnimTiles_General_Poke_Center_Sign(u16);
 static void QueueAnimTiles_Dandelion_Flower(u16);
+static void QueueAnimTiles_Circus_flag(u16);
 static void TilesetAnim_Santana(u16);
 
 const u16 gTilesetAnims_General_Flower_Frame1[] = INCGFX_U16("data/tilesets/primary/general/anim/flower/1.png", ".4bpp");
@@ -546,15 +549,43 @@ static const u16 *const sTilesetAnims_BattleDomeFloorLightPals[] = {
     gTilesetAnims_BattleDomePals0_3,
 };
 
-const u16 gTilesetAnims_dandelion_flower_Frame0[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/dandelion_flower/0.4bpp");
-const u16 gTilesetAnims_dandelion_flower_Frame1[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/dandelion_flower/1.4bpp");
-const u16 gTilesetAnims_dandelion_flower_Frame2[] = INCBIN_U16("data/tilesets/secondary/petalburg/anim/dandelion_flower/2.4bpp");
+// Strawberry tileset Anim
+
+const u16 gTilesetAnims_dandelion_flower_Frame0[] = INCGFX_U16("data/tilesets/secondary/petalburg/anim/dandelion_flower/0.png", ".4bpp");
+const u16 gTilesetAnims_dandelion_flower_Frame1[] = INCGFX_U16("data/tilesets/secondary/petalburg/anim/dandelion_flower/1.png", ".4bpp");
+const u16 gTilesetAnims_dandelion_flower_Frame2[] = INCGFX_U16("data/tilesets/secondary/petalburg/anim/dandelion_flower/2.png", ".4bpp");
 
 const u16 *const gTilesetAnims_dandelion_flower[] = {
     gTilesetAnims_dandelion_flower_Frame0,
     gTilesetAnims_dandelion_flower_Frame1,
     gTilesetAnims_dandelion_flower_Frame0,
     gTilesetAnims_dandelion_flower_Frame2
+};
+
+const u16 gTilesetAnims_poke_center_sign_Frame0[] = INCGFX_U16("data/tilesets/primary/general/anim/poke_center_sign/0.png", ".4bpp");
+const u16 gTilesetAnims_poke_center_sign_Frame1[] = INCGFX_U16("data/tilesets/primary/general/anim/poke_center_sign/1.png", ".4bpp");
+const u16 gTilesetAnims_poke_center_sign_Frame2[] = INCGFX_U16("data/tilesets/primary/general/anim/poke_center_sign/2.png", ".4bpp");
+const u16 gTilesetAnims_poke_center_sign_Frame3[] = INCGFX_U16("data/tilesets/primary/general/anim/poke_center_sign/3.png", ".4bpp");
+
+const u16 *const gTilesetAnims_poke_center_sign[] = {
+    gTilesetAnims_poke_center_sign_Frame0,
+    gTilesetAnims_poke_center_sign_Frame1,
+    gTilesetAnims_poke_center_sign_Frame2,
+    gTilesetAnims_poke_center_sign_Frame3
+};
+
+
+const u16 gTilesetAnims_circus_flag_Frame0[] = INCGFX_U16("data/tilesets/secondary/petalburg/anim/circus_flag/0.png", ".4bpp");
+const u16 gTilesetAnims_circus_flag_Frame1[] = INCGFX_U16("data/tilesets/secondary/petalburg/anim/circus_flag/1.png", ".4bpp");
+const u16 gTilesetAnims_circus_flag_Frame2[] = INCGFX_U16("data/tilesets/secondary/petalburg/anim/circus_flag/2.png", ".4bpp");
+const u16 gTilesetAnims_circus_flag_Frame3[] = INCGFX_U16("data/tilesets/secondary/petalburg/anim/circus_flag/3.png", ".4bpp");
+
+const u16 *const gTilesetAnims_circus_flag[] = {
+    gTilesetAnims_circus_flag_Frame0,
+    gTilesetAnims_circus_flag_Frame1,
+    gTilesetAnims_circus_flag_Frame2,
+    gTilesetAnims_circus_flag_Frame3,
+    gTilesetAnims_circus_flag_Frame1
 };
 
 static void ResetTilesetAnimBuffer(void)
@@ -654,6 +685,8 @@ static void TilesetAnim_General(u16 timer)
         QueueAnimTiles_General_Waterfall(timer / 16);
     if (timer % 16 == 4)
         QueueAnimTiles_General_LandWaterEdge(timer / 16);
+    if (timer % 16 == 5)
+        QueueAnimTiles_General_Poke_Center_Sign(timer / 16);
 }
 
 static void TilesetAnim_Building(u16 timer)
@@ -1207,6 +1240,8 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
     }
 }
 
+// Strawberry Anims
+
 static void QueueAnimTiles_Dandelion_Flower(u16 timer)
 {
     u16 i = timer % 4; 
@@ -1217,6 +1252,21 @@ static void TilesetAnim_Santana(u16 timer)
 {
     if (timer % 4 == 0)
         QueueAnimTiles_Dandelion_Flower(timer >> 6);
+    if (timer % 4 == 1)
+       QueueAnimTiles_Circus_flag(timer >> 4);
+}
+
+static void QueueAnimTiles_General_Poke_Center_Sign(u16 timer)
+{
+    u16 i = timer % 4; 
+    AppendTilesetAnimToBuffer(gTilesetAnims_poke_center_sign[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 4 * TILE_SIZE_4BPP);
+}
+
+
+static void QueueAnimTiles_Circus_flag(u16 timer)
+{
+    u16 i = timer % 4; 
+    AppendTilesetAnimToBuffer(gTilesetAnims_circus_flag[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(894)), 2 * TILE_SIZE_4BPP);
 }
 
 // FRLG anims

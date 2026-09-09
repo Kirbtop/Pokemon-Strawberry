@@ -2,8 +2,7 @@
   "id": "MAP_OLDALE_TOWN",
   "name": "OldaleTown",
   "layout": "LAYOUT_OLDALE_TOWN",
-  "music": "MUS_OLDALE",
-  "region": "REGION_HOENN",
+  "music": "MUS_NEVULOSA_TOWN",
   "region_map_section": "MAPSEC_NEVULOSA_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -21,7 +20,7 @@
     },
     {
       "map": "MAP_ROUTE102",
-      "offset": 18,
+      "offset": 21,
       "direction": "right"
     }
   ],
@@ -29,7 +28,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
       "x": 16,
-      "y": 15,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -43,7 +42,7 @@
       "local_id": "LOCALID_OLDALE_MART_EMPLOYEE",
       "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
       "x": 13,
-      "y": 11,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -57,7 +56,7 @@
       "local_id": "LOCALID_FOOTPRINTS_MAN",
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
       "x": 8,
-      "y": 13,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -71,7 +70,7 @@
       "local_id": "LOCALID_OLDALE_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 11,
-      "y": 23,
+      "y": 25,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -84,29 +83,29 @@
   ],
   "warp_events": [
     {
-      "x": 5,
-      "y": 11,
+      "x": 9,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_HOUSE1",
       "dest_warp_id": "0"
     },
     {
-      "x": 15,
-      "y": 20,
+      "x": 18,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_HOUSE2",
       "dest_warp_id": "0"
     },
     {
-      "x": 6,
-      "y": 20,
+      "x": 28,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
-      "y": 10,
+      "x": 18,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_MART",
       "dest_warp_id": "0"
@@ -116,7 +115,7 @@
     {
       "type": "trigger",
       "x": 0,
-      "y": 14,
+      "y": 16,
       "elevation": 3,
       "var": "VAR_OLDALE_TOWN_STATE",
       "var_value": "0",
@@ -125,7 +124,7 @@
     {
       "type": "trigger",
       "x": 8,
-      "y": 23,
+      "y": 25,
       "elevation": 3,
       "var": "VAR_OLDALE_RIVAL_STATE",
       "var_value": "1",
@@ -134,7 +133,7 @@
     {
       "type": "trigger",
       "x": 9,
-      "y": 23,
+      "y": 25,
       "elevation": 3,
       "var": "VAR_OLDALE_RIVAL_STATE",
       "var_value": "1",
@@ -143,7 +142,7 @@
     {
       "type": "trigger",
       "x": 10,
-      "y": 23,
+      "y": 25,
       "elevation": 3,
       "var": "VAR_OLDALE_RIVAL_STATE",
       "var_value": "1",
@@ -154,7 +153,7 @@
     {
       "type": "sign",
       "x": 11,
-      "y": 13,
+      "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "OldaleTown_EventScript_TownSign"
@@ -162,7 +161,7 @@
     {
       "type": "sign",
       "x": 7,
-      "y": 20,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
@@ -170,7 +169,7 @@
     {
       "type": "sign",
       "x": 15,
-      "y": 10,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
@@ -178,7 +177,7 @@
     {
       "type": "sign",
       "x": 8,
-      "y": 20,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
@@ -186,10 +185,11 @@
     {
       "type": "sign",
       "x": 16,
-      "y": 10,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

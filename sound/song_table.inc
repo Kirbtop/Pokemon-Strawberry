@@ -369,7 +369,7 @@ gSongTable::
 	song mus_route110, MUSIC_PLAYER_BGM, 0
 	song mus_route120, MUSIC_PLAYER_BGM, 0
 	song mus_petalburg, MUSIC_PLAYER_BGM, 0
-	song mus_oldale, MUSIC_PLAYER_BGM, 0
+	song mus_dummy, MUSIC_PLAYER_BGM, 0
 	song mus_gym, MUSIC_PLAYER_BGM, 0
 	song mus_surf, MUSIC_PLAYER_BGM, 0
 	song mus_petalburg_woods, MUSIC_PLAYER_BGM, 0
@@ -565,7 +565,7 @@ gSongTable::
 	song mus_rg_trainer_tower, MUSIC_PLAYER_BGM, 0
 	song mus_rg_slow_pallet, MUSIC_PLAYER_BGM, 0
 	song mus_rg_teachy_tv_menu, MUSIC_PLAYER_BGM, 0
-	song mus_dummy, MUSIC_PLAYER_BGM, 0
+	song mus_nevulosa_town, MUSIC_PLAYER_BGM, 0
 	song ph_trap_blend, MUSIC_PLAYER_SE2, 2
 	song ph_trap_held, MUSIC_PLAYER_SE2, 2
 	song ph_trap_solo, MUSIC_PLAYER_SE2, 2
