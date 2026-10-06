@@ -369,7 +369,7 @@ gSongTable::
 	song mus_route110, MUSIC_PLAYER_BGM, 0
 	song mus_route120, MUSIC_PLAYER_BGM, 0
 	song mus_petalburg, MUSIC_PLAYER_BGM, 0
-	song mus_dummy, MUSIC_PLAYER_BGM, 0
+	song mus_route2, MUSIC_PLAYER_BGM, 0
 	song mus_gym, MUSIC_PLAYER_BGM, 0
 	song mus_surf, MUSIC_PLAYER_BGM, 0
 	song mus_petalburg_woods, MUSIC_PLAYER_BGM, 0
@@ -617,6 +617,10 @@ gSongTable::
 	song ph_nurse_blend, MUSIC_PLAYER_SE2, 2
 	song ph_nurse_held, MUSIC_PLAYER_SE2, 2
 	song ph_nurse_solo, MUSIC_PLAYER_SE2, 2
+	song mus_encounter_boy, MUSIC_PLAYER_BGM, 0
+	song mus_encounter_nurse, MUSIC_PLAYER_BGM, 0
+	song mus_gate, MUSIC_PLAYER_BGM, 0
+	song mus_low_hp, MUSIC_PLAYER_BGM, 0
 
 	.align 2
 dummy_song_header:

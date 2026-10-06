@@ -4070,6 +4070,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_ROUTE110)                 \
     X(MUS_ROUTE120)                 \
     X(MUS_PETALBURG)                \
+    X(MUS_ROUTE2)                   \
     X(MUS_GYM)                      \
     X(MUS_SURF)                     \
     X(MUS_PETALBURG_WOODS)          \
@@ -4257,7 +4258,11 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_RG_TRAINER_TOWER)         \
     X(MUS_RG_SLOW_PALLET)           \
     X(MUS_RG_TEACHY_TV_MENU)        \
-    X(MUS_NEVULOSA_TOWN)
+    X(MUS_NEVULOSA_TOWN)            \
+    X(MUS_ENCOUNTER_BOY)            \
+    X(MUS_ENCOUNTER_NURSE)          \
+    X(MUS_GATE)                     \
+    X(MUS_LOW_HP)
 
 #define SOUND_LIST_SE               \
     X(SE_USE_ITEM)                  \

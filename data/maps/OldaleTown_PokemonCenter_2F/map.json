@@ -2,8 +2,7 @@
   "id": "MAP_OLDALE_TOWN_POKEMON_CENTER_2F",
   "name": "OldaleTown_PokemonCenter_2F",
   "layout": "LAYOUT_POKEMON_CENTER_2F",
-  "music": "MUS_POKE_CENTER",
-  "region": "REGION_HOENN",
+  "music": "MUS_GATE",
   "region_map_section": "MAPSEC_NEVULOSA_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -85,5 +84,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

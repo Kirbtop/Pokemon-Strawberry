@@ -1,17 +1,26 @@
 {
     "view": {
         "editCursorTick": 0,
+        "emptyLanes": [
+            {
+                "cc": 7,
+                "track": 6
+            }
+        ],
+        "eventList": false,
         "gridMinDenom": 0,
         "gridTriplet": false,
-        "keyHeight": 12,
+        "keyHeight": 12.861281550435514,
         "laneHeight": 48,
-        "pxPerBeat": 54.89000684933352,
-        "scrollPx": 965,
-        "scrollY": 268,
-        "selectedTrack": 3,
+        "pxPerBeat": 9.831780386029937,
+        "scrollPx": 237,
+        "scrollY": 425.2440384557458,
+        "selectedTrack": 5,
         "splitter": [
-            708,
+            690,
+            0,
             150
-        ]
+        ],
+        "tempoLane": false
     }
 }

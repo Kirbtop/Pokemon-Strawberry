@@ -477,6 +477,14 @@
 #define METATILE_Petalburg_Door_Nevulosa     0x8D9
 #define METATILE_Petalburg_Door_Oldale       0x887
 #define METATILE_Petalburg_Door_Santana      0x86A
+#define METATILE_Petalburg_Licho_Open1       0x91D
+#define METATILE_Petalburg_Licho_Open2       0x915
+#define METATILE_Petalburg_Licho_Open3       0x91C
+#define METATILE_Petalburg_Licho_Open4       0x914
+#define METATILE_Petalburg_Licho_Open5       0x92D
+#define METATILE_Petalburg_Licho_Open6       0x925
+#define METATILE_Petalburg_Licho_Open7       0x92C
+#define METATILE_Petalburg_Licho_Open8       0x924
 
 // gTileset_PetalburgGym
 #define METATILE_PetalburgGym_Door                0x224

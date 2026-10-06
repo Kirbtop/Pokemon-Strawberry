@@ -291,6 +291,7 @@
 #define MUS_ROUTE110                360 // MUS_DOORO_X1         // Also used in Routes 112, 114, 117, 111's non-desert section and 118's west half.
 #define MUS_ROUTE120                361 // MUS_DOORO_X3         // Also used in Routes 121, 124, 125, 126, 127 and 128.
 #define MUS_PETALBURG               362 // MUS_MACHI_S2         // Also used in Mr. Briney's House and Pretty Petal Flower Shop.
+#define MUS_ROUTE2                 363
 #define MUS_GYM                     364 // MUS_GIM
 #define MUS_SURF                    365 // MUS_NAMINORI
 #define MUS_PETALBURG_WOODS         366 // MUS_DAN01            // Also used in Artisan Cave, Fiery Path, Granite Cave, Jagged Pass, Marine Cave, Rusturf Tunnel, Scorched Slab and Terra Cave.
@@ -306,7 +307,7 @@
 #define MUS_EVOLUTION_INTRO         376 // MUS_ME_SHINKA        // Also used in egg hatching.
 #define MUS_EVOLUTION               377 // MUS_SHINKA           // Also used in egg hatching and trades.
 #define MUS_MOVE_DELETED            378 // MUS_ME_WASURE
-#define MUS_ENCOUNTER_GIRL          379 // MUS_SYOUJOEYE
+#define MUS_ENCOUNTER_GIRL          379
 #define MUS_ENCOUNTER_MALE          380 // MUS_BOYEYE
 #define MUS_ABANDONED_SHIP          381 // MUS_DAN02            // Also used in Faraway and Southern Islands.
 #define MUS_FORTREE                 382 // MUS_MACHI_S3         // Also used in Secret Bases and the Safari Zone's entrance.
@@ -403,7 +404,7 @@
 #define MUS_B_DOME_LOBBY            473 // MUS_B_DOME1
 #define MUS_VS_WILD                 474 // MUS_BATTLE27
 #define MUS_VS_AQUA_MAGMA           475 // MUS_BATTLE31
-#define MUS_VS_TRAINER              476 // MUS_BATTLE20
+#define MUS_VS_TRAINER              476
 #define MUS_VS_GYM_LEADER           477 // MUS_BATTLE32
 #define MUS_VS_CHAMPION             478 // MUS_BATTLE33
 #define MUS_VS_REGI                 479 // MUS_BATTLE36
@@ -542,6 +543,10 @@
 #define PH_NURSE_BLEND              608
 #define PH_NURSE_HELD               609
 #define PH_NURSE_SOLO               610
+#define MUS_ENCOUNTER_BOY           611
+#define MUS_ENCOUNTER_NURSE         612
+#define MUS_GATE                    613
+#define MUS_LOW_HP                  614
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

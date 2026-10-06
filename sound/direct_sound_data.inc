@@ -9049,3 +9049,7 @@ DirectSoundWaveData_clarinet::
 	.align 2
 DirectSoundWaveData_acoustic_bass::
 	.incbin "sound/direct_sound_samples/acoustic_bass.bin"
+
+	.align 2
+DirectSoundWaveData_orchestra_hit_1::
+	.incbin "sound/direct_sound_samples/orchestra_hit_1.bin"
