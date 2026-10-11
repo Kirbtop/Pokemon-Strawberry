@@ -207,3 +207,4 @@
 .include "sound/voicegroups/mus_gate.inc"
 .include "sound/voicegroups/mus_low_hp.inc"
 .include "sound/voicegroups/mus_vs_trainer.inc"
+.include "sound/voicegroups/mus_great_picture.inc"

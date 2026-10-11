@@ -547,6 +547,9 @@
 #define MUS_ENCOUNTER_NURSE         612
 #define MUS_GATE                    613
 #define MUS_LOW_HP                  614
+#define SE_WEIRD                    615
+#define SE_WEIRD_ABORT              616
+#define MUS_GREAT_PICTURE           617
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

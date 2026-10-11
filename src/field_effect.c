@@ -461,7 +461,7 @@ static const struct SpriteFrameImage sPicTable_HofMonitor_Frlg[] = {
 static const struct Subsprite sSubsprites_PokecenterMonitor[] =
 {
     {
-        .x = -12,
+        .x = -16,
         .y =  -8,
         .shape = SPRITE_SHAPE(16x8),
         .size = SPRITE_SIZE(16x8),
@@ -469,27 +469,27 @@ static const struct Subsprite sSubsprites_PokecenterMonitor[] =
         .priority = 2
     },
     {
-        .x =  4,
+        .x =  0,
         .y = -8,
-        .shape = SPRITE_SHAPE(8x8),
-        .size = SPRITE_SIZE(8x8),
+        .shape = SPRITE_SHAPE(16x8),
+        .size = SPRITE_SIZE(16x8),
         .tileOffset = 2,
         .priority = 2
     },
     {
-        .x = -12,
+        .x = -16,
         .y =   0,
         .shape = SPRITE_SHAPE(16x8),
         .size = SPRITE_SIZE(16x8),
-        .tileOffset = 3,
+        .tileOffset = 4,
         .priority = 2
     },
     {
-        .x = 4,
+        .x = 0,
         .y = 0,
-        .shape = SPRITE_SHAPE(8x8),
-        .size = SPRITE_SIZE(8x8),
-        .tileOffset = 5,
+        .shape = SPRITE_SHAPE(16x8),
+        .size = SPRITE_SIZE(16x8),
+        .tileOffset = 6,
         .priority = 2
     }
 };
@@ -601,7 +601,7 @@ static const struct SpriteTemplate sSpriteTemplate_PokecenterMonitor =
 {
     .tileTag = TAG_NONE,
     .paletteTag = FLDEFF_PAL_TAG_GENERAL_0,
-    .oam = &sOam_16x16,
+    .oam = &sOam_32x16,
     .anims = sAnims_Flicker,
     .images = sPicTable_PokecenterMonitor,
     .callback = SpriteCB_PokecenterMonitor
@@ -677,11 +677,11 @@ static void (*const sPokeballGlowEffectFuncs[])(struct Sprite *) =
 static const struct Coords16 sPokeballCoordOffsets[PARTY_SIZE] =
 {
     {.x = 0, .y = 0},
-    {.x = 6, .y = 0},
-    {.x = 0, .y = 4},
-    {.x = 6, .y = 4},
-    {.x = 0, .y = 8},
-    {.x = 6, .y = 8}
+    {.x = 4, .y = 4},
+    {.x = 10, .y = 7},
+    {.x = 18, .y = 7},
+    {.x = 24, .y = 4},
+    {.x = 28, .y = 0}
 };
 
 static const u8 sPokeballGlowReds[]   = {16, 12, 8, 0};
@@ -1132,9 +1132,9 @@ bool8 FldEff_PokecenterHeal(void)
     nPokemon = (OW_IGNORE_EGGS_ON_HEAL <= GEN_3) ? CalculatePlayerPartyCount() : CountPartyNonEggMons();
     task = &gTasks[CreateTask(Task_PokecenterHeal, 0xff)];
     task->tNumMons = nPokemon;
-    task->tFirstBallX = 93;
+    task->tFirstBallX = 106;
     task->tFirstBallY = 36;
-    task->tMonitorX = 124;
+    task->tMonitorX = 120;
     task->tMonitorY = 24;
     return FALSE;
 }

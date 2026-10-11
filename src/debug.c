@@ -4262,7 +4262,8 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_ENCOUNTER_BOY)            \
     X(MUS_ENCOUNTER_NURSE)          \
     X(MUS_GATE)                     \
-    X(MUS_LOW_HP)
+    X(MUS_LOW_HP)                   \
+    X(MUS_GREAT_PICTURE)
 
 #define SOUND_LIST_SE               \
     X(SE_USE_ITEM)                  \
@@ -4533,7 +4534,9 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(SE_ARENA_TIMEUP2)             \
     X(SE_PIKE_CURTAIN_CLOSE)        \
     X(SE_PIKE_CURTAIN_OPEN)         \
-    X(SE_SUDOWOODO_SHAKE)
+    X(SE_SUDOWOODO_SHAKE)           \
+    X(SE_WEIRD)                     \
+    X(SE_WEIRD_ABORT)
 
 // Create song list
 #define X(songId) [songId] = COMPOUND_STRING(#songId),

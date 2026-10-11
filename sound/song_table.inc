@@ -621,6 +621,9 @@ gSongTable::
 	song mus_encounter_nurse, MUSIC_PLAYER_BGM, 0
 	song mus_gate, MUSIC_PLAYER_BGM, 0
 	song mus_low_hp, MUSIC_PLAYER_BGM, 0
+	song se_weird, MUSIC_PLAYER_SE1, 1
+	song se_weird_abort, MUSIC_PLAYER_SE1, 1
+	song mus_great_picture, MUSIC_PLAYER_BGM, 0
 
 	.align 2
 dummy_song_header:
